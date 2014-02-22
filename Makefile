@@ -21,12 +21,13 @@ preview: makepdf
 
 # Publish the resume to gihub
 push:
+	rm *.pdf
 	git add --all
 	git commit -e -m "Updated on $(DATE)"
 	git push origin master
 
 # Take the resume, build the necessary files and publish to github
-publish: cleanall makeimage clean push cleanall
+publish: makeimage clean push cleanall
 
 # Clean up the directory
 clean:
