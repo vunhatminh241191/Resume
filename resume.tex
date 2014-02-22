@@ -1,0 +1,175 @@
+% Erik Sutherland's Resume
+% Created: 7 Jan 2004
+% Last Modified: 17 Jul 2004
+
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Erik Sutherland}
+\newcommand{\addr}{3255 SE Lake Road, Milwaukie, OR 97222}
+\newcommand{\phone}{(503) 970-2779}
+\newcommand{\email}{esuther@pdx.edu}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\fontfamily{phv}\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+\fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+
+\vspace{8 pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+    \begin{ressubsec}{Portland State University}{Portland, OR}{Majoring in Computer Science and in Psychology}
+		\ressubitem{GPA: 3.41 (overall), 3.40 (CS major), 3.5 (Psychology major)}
+		\ressubitem{Projected Graduation Date: June, 2014}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Experience}
+
+    \begin{ressubsec}{Computer Action Team}{Portland, OR}{Systems Administor (claw-1): September 2012 - Present}
+		\ressubitem{Manage Linux systems for the College of Engineering at Portland State University.}
+		\ressubitem{Use Configuration management and version control extensively.}
+		\ressubitem{Develop tools and scripts to improve reliability and functionality of the network.}
+		\ressubitem{Assist users with problems and provide documentation.}
+        \ressubitem{Lead classes on Linux command line tools.}
+	\end{ressubsec}
+
+	\begin{ressubsec}{College of Computer Sciences}{Portland, OR}{Computer Science Tutor: Jan, 2013 - Present}
+        \ressubitem{Assist students with into level (161-311) Computer Science questions involving Python, C++, and Java.}
+        \ressubitem{Lead workshops for "Intro to Linux", and "Intro to Command line Editors".}
+        \ressubitem{Teach essential programming tools, including: Vim, Make, gcc, gdb, valgrind.}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills}
+
+    \resitem{\textbf{Operating Systems:} Linux (Arch, Red Hat, and Debian/Ubuntu), UNIX (Solaris).}
+
+	\begin{reslist}{Computer Languages:}
+
+        \ressubitem{Proficient in C, Haskell, Markdown, Python, bash.}
+
+        \ressubitem{Familiar with C++, HTML, Java, JavaScript, \LaTeX, Perl, SQL.}
+
+	\end{reslist}
+
+	\begin{reslist}{Tools and Systems:}
+
+        \ressubitem{Proficient in Cabal, GDB, GHC, Git, IRC, Make, Puppet, VIM, ZFS.}
+
+        \ressubitem{Familiar with Apche, BIND, dhcpd, NFS, OpenLDAP, PXE, rsync, Samba.}
+
+	\end{reslist}
+
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Achievements and Activities}
+
+    \resitem{Lead the MCECS Google Glass Dev Team.}
+
+    \resitem{Developed Android app for cyclists to contribute traffic information to the Portland State Portal Database.}
+
+    \resitem{Maintain a presence on Freenode as \textit{MrRacoon}.}
+
+    \resitem{On Github @ \textit{https://github.com/MrRacoon}.}
+
+\end{ressection}
+
+
+\end{document}
