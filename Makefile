@@ -1,5 +1,11 @@
 all: resume
 
+publish: resume clean jpeg
+	rm *.pdf
+
+jpeg:
+	convert resume.pdf Erik_Sutherland_Resume.png
+
 resume: dvi
 	dvipdfm resume.dvi
 
