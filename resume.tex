@@ -25,29 +25,29 @@
 
 % This defines how the name looks
 \newcommand{\bigname}[1]{
-	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+    \begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
 }
 
 % A ressection is a main section (<H1>Section</H1>)
 \newenvironment{ressection}[1]{
-	\vspace{4pt}
-	{\fontfamily{phv}\selectfont\Large#1}
-	\begin{itemize}
-	\vspace{3pt}
+    \vspace{4pt}
+    {\fontfamily{phv}\selectfont\Large#1}
+    \begin{itemize}
+    \vspace{3pt}
 }{
-	\end{itemize}
+    \end{itemize}
 }
 
 % A resitem is a simple list element in a ressection (first level)
 \newcommand{\resitem}[1]{
-	\vspace{-4pt}
-	\item \begin{flushleft} #1 \end{flushleft}
+    \vspace{-4pt}
+    \item \begin{flushleft} #1 \end{flushleft}
 }
 
 % A ressubitem is a simple list element in anything but a ressection (second level)
 \newcommand{\ressubitem}[1]{
-	\vspace{-1pt}
-	\item \begin{flushleft} #1 \end{flushleft}
+    \vspace{-1pt}
+    \item \begin{flushleft} #1 \end{flushleft}
 }
 
 % A resbigitem is a complex list element for stuff like jobs and education:
@@ -55,28 +55,28 @@
 %  Arg 2: Location
 %  Arg 3: Title and/or date range
 \newcommand{\resbigitem}[3]{
-	\vspace{-5pt}
-	\item
-	\textbf{#1}---#2 \\
-	\textit{#3}
+    \vspace{-5pt}
+    \item
+    \textbf{#1}---#2 \\
+    \textit{#3}
 }
 
 % This is a list that comes with a resbigitem
 \newenvironment{ressubsec}[3]{
-	\resbigitem{#1}{#2}{#3}
-	\vspace{-2pt}
-	\begin{itemize}
+    \resbigitem{#1}{#2}{#3}
+    \vspace{-2pt}
+    \begin{itemize}
 }{
-	\end{itemize}
+    \end{itemize}
 }
 
 % This is a simple sublist
 \newenvironment{reslist}[1]{
-	\resitem{\textbf{#1}}
-	\vspace{-5pt}
-	\begin{itemize}
+    \resitem{\textbf{#1}}
+    \vspace{-5pt}
+    \begin{itemize}
 }{
-	\end{itemize}
+    \end{itemize}
 }
 
 
@@ -97,22 +97,22 @@
     \begin{ressubsec}{Computer Action Team}{Portland State University}{Systems Administrator (Claw-1): September 2012 - present}
         \ressubitem{Manage Linux systems for the College of Engineering and Computer Science}
         \ressubitem{Use Configuration Management and version control extensively}
-		\ressubitem{Troubleshoot user issues and document resolution}
+        \ressubitem{Troubleshoot user issues and document resolution}
         \ressubitem{Teach classes on Linux command line utilities}
-	\end{ressubsec}
-	\begin{ressubsec}{College of Computer Sciences}{Portland State University}{Computer Science Tutor: January, 2013 - present}
+    \end{ressubsec}
+    \begin{ressubsec}{College of Computer Sciences}{Portland State University}{Computer Science Tutor: January, 2013 - present}
         \ressubitem{Assist students with intro level (CS161-CS311) computer science assignments involving Python, C++, and Java}
         \ressubitem{Lead workshops for \textit{Intro to Linux}, and \textit{Intro to Command Line Editors}}
         \ressubitem{Teach essential programming tools, including: vim, make, gcc, gdb, valgrind}
-	\end{ressubsec}
+    \end{ressubsec}
 \end{ressection}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Education}
     \begin{ressubsec}{Portland State University}{Portland, OR}{B.S. in Computer Science and B.S. in Psychology}
-		\ressubitem{Graduation date: June 2014}
-	\end{ressubsec}
+    \ressubitem{Graduation date: June 2014}
+    \end{ressubsec}
 \end{ressection}
 
 
@@ -121,15 +121,15 @@
     \begin{reslist}{Operating Systems:}
         \ressubitem{Proficient with Arch Linux and Debian/Ubuntu}
         \ressubitem{Familiar with Solaris and Red Hat}
-	\end{reslist}
-	\begin{reslist}{Computer Languages:}
+    \end{reslist}
+    \begin{reslist}{Computer Languages:}
         \ressubitem{Proficient in C, Haskell, Markdown, Python, bash}
         \ressubitem{Familiar with C++, HTML, Java, JavaScript, \LaTeX, Perl, SQL}
-	\end{reslist}
-	\begin{reslist}{Tools and Systems:}
+    \end{reslist}
+    \begin{reslist}{Tools and Systems:}
         \ressubitem{Proficient in Cabal, GDB, GHC, Git, IRC, Make, Puppet, VIM, ZFS}
         \ressubitem{Familiar with Apache, BIND, dhcpd, NFS, OpenLDAP, PXE, rsync, Samba}
-	\end{reslist}
+    \end{reslist}
 \end{ressection}
 
 
