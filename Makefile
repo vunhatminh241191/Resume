@@ -19,6 +19,9 @@ makeimage: compile makepdf
 preview: makepdf
 	evince resume.pdf
 
+ttypreview: makepdf
+	fbgs resume.pdf
+
 # Publish the resume to gihub
 push:
 	rm *.pdf
