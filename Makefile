@@ -34,11 +34,8 @@ publish: makeimage clean push cleanall
 
 # Clean up the directory
 clean:
-	rm *.dvi
-	rm *.log
-	rm *.aux
+	$(RM) *.dvi *.log *.aux
 
 # Clean the directory, including pdf and png
 cleanall: clean
-	rm *.pdf
-	rm *.png
+	$(RM) *.pdf *.png
