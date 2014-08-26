@@ -1,9 +1,17 @@
 % Erik Sutherland's Resume
 % Created: 22 Feb, 2014
 
-\documentclass[11pt,oneside]{article}
+\documentclass[10pt,oneside]{article}
 \usepackage{geometry}
 \usepackage[T1]{fontenc}
+\usepackage[dvipdfm]{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
 \pagestyle{empty}
 \geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
@@ -15,10 +23,9 @@
 \setlength{\tabcolsep}{0in}
 
 % Name and contact information
-\newcommand{\name}{Erik Sutherland}
-\newcommand{\addr}{3255 SE Lake Road, Milwaukie, OR 97222}
-\newcommand{\phone}{(503) 970-2779}
-\newcommand{\email}{erik.misu@gmail.com}
+\newcommand{\name}{MINH VU} 
+\newcommand{\phone}{(971) 570-0472}
+\newcommand{\email}{min.vunhat@gmail.com}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % New commands and environments
@@ -84,61 +91,69 @@
 % Now for the actual document:
 
 \begin{document}
+
 \fontfamily{ppl} \selectfont
 % Name with horizontal rule
 \bigname{\name}
 \vspace{-8pt} \rule{\textwidth}{1pt}
-\vspace{-1pt} {\small\itshape \addr \hfill \phone; \email}
+\vspace{-1pt} {\small\itshape \hfill \phone; \email}
 \vspace{8 pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Experience}
-    \begin{ressubsec}{Computer Action Team}{Portland State University}{Systems Administrator (Claw-1): September 2012 - present}
-        \ressubitem{Manage Linux systems for the College of Engineering and Computer Science}
-        \ressubitem{Use Configuration Management and version control extensively}
-        \ressubitem{Troubleshoot user issues and document resolution}
-        \ressubitem{Teach classes on Linux command line utilities}
-    \end{ressubsec}
-    \begin{ressubsec}{College of Computer Sciences}{Portland State University}{Computer Science Tutor: January, 2013 - present}
-        \ressubitem{Assist students with intro level (CS161-CS311) computer science assignments involving Python, C++, and Java}
-        \ressubitem{Lead workshops for \textit{Intro to Linux}, and \textit{Intro to Command Line Editors}}
-        \ressubitem{Teach essential programming tools, including: vim, make, gcc, gdb, valgrind}
-    \end{ressubsec}
+\begin{ressection}{Education}
+    \ressubitem{Portland State University - Portland, OR}
+    \ressubitem{B.S. in Computer Science - June 2014}
 \end{ressection}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Education}
-    \begin{ressubsec}{Portland State University}{Portland, OR}{B.S. in Computer Science and B.S. in Psychology}
-    \ressubitem{Graduation date: June 2014}
+\begin{ressection}{Experience}
+    \begin{ressubsec}{\textbf{Research Assistant}}{Portland State University - Portland, OR}{Simple Searchable Encrypt Email: January 2013 - present}
+        \ressubitem{Created encrypted email from plain emails and hiding its using Cryptography}
+        \ressubitem{Setup Dovecot Imap Server}
+        \ressubitem{Wrote Proxy to handle connection from server and client involving Python. It works well with many clients}
+    \end{ressubsec}
+    \begin{ressubsec}{\textbf{Developer Backend}}{Portland State University - Portland, OR}{\href{https://github.com/PedalPDX}{Android app for cyclist}: September 2013 - April 2014}
+        \ressubitem{This Android app contribute traffic information for cyclist to the \href{http://portal.its.pdx.edu/Portal/index.php/home/}{Portland Observatory}}
+        \ressubitem{Contributed to create server involving Python Flask RESTful Api}
+        \ressubitem{Wrote an Haversine formula for clipping path before upload to server involving Java, JSON}
+        \ressubitem{Showed users'path in \href{youtube.com/watch?v=4yytWb-Zf6o}{Google Maps} involving Google API, Java}
+    \end{ressubsec}
+    \begin{ressubsec}{\textbf{Developer Full Stack}}{\href{http://www.buddyup.org/}{Buddy Up} - Portland, OR}{Social networking company: August 2013 - January 2014}
+        \ressubitem{Buddy Up is a start up social networking company to helping students studying together}
+        \ressubitem{Redesigned \href{http://buddyup.herokuapp.com/home}{website} involving Python Flask, HTML, CSS, Javascript, Bootstrap}
+        \ressubitem{Implemented database invovling SqlAlchemy}
+        \ressubitem{Deployed code in Heroku from \href{https://github.com/vunhatminh241191}{Git}}
+    \end{ressubsec}
+    \begin{ressubsec}{\textbf{Software Developer}}{Portland State University - Portland, OR}{\href{https://github.com/vunhatminh241191/BrandTrack}{Android shopping app}: April 2013 - June 2013}
+    	\ressubitem{This Android app help people who want to buy something can know which is a good deal in that store}
+    	\ressubitem{Designed a Android app's structure involving Java}
+    	\ressubitem{Analyzed JSON file from Google Shoping API to get famous data}
+    	\ressubitem{Sorted a list of brand and showed it for users to choosing}
+    	\ressubitem{Showed a website with some good deals to users}
     \end{ressubsec}
 \end{ressection}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Skills}
-    \begin{reslist}{Operating Systems:}
-        \ressubitem{Proficient with Arch Linux and Debian/Ubuntu}
-        \ressubitem{Familiar with Solaris and Red Hat}
+    \ressubitem{\textbf{Operating Systems}: Debian/Ubuntu}
+    \begin{reslist}{Computer Languages}
+        \ressubitem{Proficient in Python, Java, C++, SQL}
+        \ressubitem{Familiar with HTML, CSS, Javascript, Bootstrap, Markdown, Ruby, Latex}
     \end{reslist}
-    \begin{reslist}{Computer Languages:}
-        \ressubitem{Proficient in C, Haskell, Markdown, Python, bash}
-        \ressubitem{Familiar with C++, HTML, Java, JavaScript, \LaTeX, Perl, SQL}
-    \end{reslist}
-    \begin{reslist}{Tools and Systems:}
-        \ressubitem{Proficient in Cabal, GDB, GHC, Git, IRC, Make, Puppet, VIM, ZFS}
-        \ressubitem{Familiar with Apache, BIND, dhcpd, NFS, OpenLDAP, OpenStack, PXE, rsync, Samba}
+    \begin{reslist}{Tools and Systems}
+        \ressubitem{Proficient in Google API, Git, JSON, VIM, Flask}
+        \ressubitem{Familiar with Apache, Vargant, AWS, Heroku, Django, Vargant}
     \end{reslist}
 \end{ressection}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ressection}{Achievements and Activities}
-    \resitem{Contributing to the h-store project with the Datalab team at Portland State}
-    \resitem{Leading the Google Glass Development Team at Portland State}
-    \resitem{Developed Android app for cyclists to contribute traffic information to the Portland Observatory \textit{portal.its.pdx.edu}}
-    \resitem{Maintaining a presence on Freenode as \textit{MrRacoon}, and on GitHub \textit{https://github.com/MrRacoon}}
+\begin{ressection}{Activities}
+    \resitem{Bi-language: Vietnamese and English}
+    \resitem{Joining Python User's group}
 \end{ressection}
 
 
